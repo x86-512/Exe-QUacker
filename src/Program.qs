@@ -32,8 +32,8 @@
 
     //Okay, when there are no quantum operations, Q# wants it to be a function
     function CalculateIterations(num_qubits : Int) : Int {
-        return Round((PI()/4.0)*(ArcSin(1.0 / Sqrt(IntAsDouble(1<<<num_qubits))))-0.5); //Calculates N Optimal
-    }
+        return Round((PI()/4.0)/(ArcSin(1.0 / Sqrt(IntAsDouble(1<<<num_qubits))))-0.5); //Calculates N Optimal
+    } //Actually works better when it is divided. I know this is against the algorithm, but it works better when I divide pi/4 by the arcsin
 
     operation ApplyOracle(oracle : ((Qubit[], Qubit[], Qubit) => Unit is Adj), qubits : Qubit[], register : Qubit[]) : Unit {
         use target = Qubit();
