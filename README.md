@@ -11,6 +11,3 @@ After calculating the optimal number of iterations, the register will be initial
 
 $H_n$|0$>^$$(\otimes n)$$ = $\frac{1}{N}$ $$\sum\limits_{x=0}^{N-1}(x)$$
 The $\otimes n$ means that the transform is applied to n qubits.
-
-Test:
-$\[ \sigma =\sqrt{\frac{1}{N}\sum\limits_{i=1}^N (x_i - \mu)} \]$
