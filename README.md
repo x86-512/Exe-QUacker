@@ -10,4 +10,4 @@ Where $N_i$ is the optimal number of iterations for the algorithm and N is the n
 
 The key is then put into superposition with the Hadamard Transform:
 
-$H|key\rangle^{\otimes n} = \frac{1}{\sqrt(N)}\qquad \sum_{x=0}^{N-1}|x\rangle$
+$H|key\rangle^{\otimes n} = \frac{1}{\sqrt(N)}\[\sum_{x=0}^{N-1}|x\rangle \]$
