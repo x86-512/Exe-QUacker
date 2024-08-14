@@ -3,5 +3,4 @@ A program that uses Grover's Algorithm with a simple phase oracle and Quantum su
 
 # The math behind the algorithm:
 The number of iterations is calculated with the formula:
-$N_i = \frac{\frac{\pi}{4}}{arcsin(\frac{1}{\sqrt(N)})-0.5}$
-$N_i$ is the optimal number of iterations for the algorithm. N is the number of qubits that the key will be.
+$N_i = \frac{\frac{\pi}{4}}{arcsin(\frac{1}{\sqrt(N)})-0.5}$ Where $N_i$ is the optimal number of iterations for the algorithm and N is the number of qubits that the key will be.
