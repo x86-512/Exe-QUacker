@@ -7,6 +7,7 @@ The number of iterations is calculated with the formula:
 $N_i = \frac{\frac{\pi}{4}}{arcsin(\frac{1}{\sqrt(n)})-0.5}$ 
 
 Where $N_i$ is the optimal number of iterations for the algorithm and N is the number of qubits that the key will be.
+The reason the formula is divided instead of multiplied is because the algorithm is less accurate when multiplied.
 
 The key is then put into superposition with the Hadamard Transform:
 
