@@ -5,6 +5,6 @@ A program that uses Grover's Algorithm with a simple phase oracle and Quantum su
 Many algorithms, especially those in quantum computing, involve a lot of math. 
 
 The first step is to calculate the number of optimal iterations for the main loop using the formula:
-$\sqrt(\frac{N}{M})$
+$\frac{\pi}{4}\sqrt(\frac{N}{M}) - \frac{1}{2}$
 
 $\left(\sum_{k=1}^n k \right)$
