@@ -6,5 +6,6 @@ Many algorithms, especially those in quantum computing, involve a lot of math.
 
 The first step is to calculate the number of optimal iterations for the main loop using the formula:
 $N_i$ = $\frac{\pi}{4}\sqrt(\frac{N}{M}) - \frac{1}{2}$
+After calculating the optimal number of iterations, the register will be initialized in |0\rangle
 
 $\left(\sum_{k=1}^n k \right)$
