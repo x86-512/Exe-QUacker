@@ -10,3 +10,4 @@ N is the total number of possible items. M is the number of valid inputs.
 After calculating the optimal number of iterations, the register will be initialized and put into superposition with the Hadamard Transform.
 
 $H_n$|0$>^ \otimes n$ = $\left(\sum_{k=1}^n k \right)$
+The $\otimes n$ means that the transform is applied to n qubits.
