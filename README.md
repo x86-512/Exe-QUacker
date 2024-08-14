@@ -17,4 +17,4 @@ n is the number if qubits and N is the total possible combinations of the key. $
 The oracle is applied, and the Hadamard gate is applied again, and a Conditional Z shift is applied.
 The overall formula for the algorithm is
 $(-H^{\otimes n}O_0H^{\otimes n}O_f)^{N_i}H^{\otimes n}$
-O_f is the oracle and O_0 is the conditional.
+$O_f$ is the oracle and $O_0$ is the conditional.
