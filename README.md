@@ -13,7 +13,7 @@ The key is then put into superposition with the Hadamard Transform:
 
 $H|key\rangle^{\otimes n} = \frac{1}{\sqrt(N)}\sum_{x=0}^{N-1}|x\rangle $
 
-n is the number if qubits and N is the total possible combinations of the key. $\otimes n$ means that the tensor product will be applied n times, meaning that the operation is applied to the whole key.
+n is the number if qubits and N is the total possible combinations of the key. $\otimes n$ means that the tensor product will be applied to n qubits in the key. In this case, the operation is applied to the whole key.
 
 The oracle is applied, and the Hadamard gate is applied again, and a Conditional Z shift is applied.
 The overall formula for the algorithm is
