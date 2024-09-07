@@ -27,7 +27,5 @@ def main() -> None:
     else:
         print("The encryption on this PE file is too strong... For now at least")
 
-    #computer_guess = "left" if str(qsharp.eval("pe_brute_forcer.randomBit()"))=="One" else "right"
-
 if __name__=="__main__":
     main()
