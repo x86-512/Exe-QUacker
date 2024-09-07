@@ -20,6 +20,7 @@ def main() -> None:
     if toCrack==77 and toTest==90: #It starts with MZ
         print("The PE file is unencrypted")
         exit()
+    print("[+] Cracking exe file...")
     key_dec = int(qsharp.eval(f"pe_brute_forcer.CrackAsInt({toCrack})"))
     if toCrack^key_dec==77 and toTest^key_dec==90:
         print(f"[+] PE encryption successfully broken!\nXOR Key: {hex(key_dec)}")
