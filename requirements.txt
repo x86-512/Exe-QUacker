@@ -1,1 +1,2 @@
 qsharp>=1.8.0
+azure-quantum>=2.1.0
