@@ -22,4 +22,5 @@ $(-H^{\otimes n}O_0H^{\otimes n}O_f)^{N_i}H^{\otimes n}$
 Where $O_f$ is the oracle and $O_0$ is the conditional.
 
 # How to run:
+Install python 3.10
 Install requirements: `pip install -r requirements.txt`
