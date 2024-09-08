@@ -38,11 +38,11 @@
     operation ApplyOracle(oracle : ((Qubit[], Qubit[], Qubit) => Unit is Adj), qubits : Qubit[], register : Qubit[]) : Unit {
         use target = Qubit();
         X(target);
+        H(target);//Initializes to - 1/sqrt(2)|1> to cause phase kickback 
+        oracle(qubits, register, target); //Causes phase kickback on the correct key state
         H(target);
-        oracle(qubits, register, target);
-        H(target);
-        X(target);
-        Reset(target);
+        X(target); 
+        Reset(target); //Quantum operations must be reversable, so the last H,X, and reset make it reversable, also no unreset qubits
     }
 
     operation Crack(ciphertext : Int) : Result[] {
