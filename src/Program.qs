@@ -62,7 +62,7 @@
             ApplyToEach(H, qubits);
             ApplyToEach(X, qubits);
             Controlled Z(Most(qubits), Tail(qubits));//Conditional Phase Shift here
-            ApplyToEach(X, qubits);
+            ApplyToEach(X, qubits); //Reverts back to the original state so the function is reversable
             ApplyToEach(H, qubits);
         }
 
