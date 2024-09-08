@@ -55,6 +55,7 @@
         
         ApplyToEach(H, qubits);
         //Grover's Diffusion Operator (with the Oracle)
+        //Technically Grover's Algorithm uses the H gate for constructive interference to amplify the correct state
         for  _ in 1..numOfIterations {
             
             ApplyOracle(oracle, qubits, register); //The correct one is now - due to phase kickbacl
