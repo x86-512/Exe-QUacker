@@ -58,13 +58,13 @@
         //Technically Grover's Algorithm uses the H gate for constructive interference to amplify the correct state
         for  _ in 1..numOfIterations {
             
-            ApplyOracle(oracle, qubits, register); //The correct one is now - due to phase kickbacl
+            ApplyOracle(oracle, qubits, register); //The correct one is now - due to phase kickback
 
             ApplyToEach(H, qubits); //If the ones count for the state is even, the +- state is not flipped
-            ApplyToEach(X, qubits);
+            ApplyToEach(X, qubits); //Flips the - phase on everything in the state except 0
             Controlled Z(Most(qubits), Tail(qubits));//Conditional Phase Shift here
             ApplyToEach(X, qubits); //Reverts back to the original state so the function is reversable
-            ApplyToEach(H, qubits);
+            ApplyToEach(H, qubits); //Amplifies the correct probability until it is 1
         }
 
         
