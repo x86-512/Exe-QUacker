@@ -65,7 +65,7 @@
             Controlled Z(Most(qubits), Tail(qubits));//Conditional Phase Shift here
             ApplyToEach(X, qubits); //Reverts back to the original state so the function is reversable
             ApplyToEach(H, qubits); //Amplifies the correct probability until it is 1
-        }
+        } //Reflects across the mean of all probabilities
 
         
         ResetAll(register);
