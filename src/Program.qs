@@ -23,7 +23,7 @@
         //This operation is unitary, so it can preserve the total probability of measurement for the quantum state
         within {
             //Key is in superposition, 
-            ApplyXorInPlace(ciphertext, key); //This is little endian BTW
+            ApplyXorInPlace(ciphertext, key); //This is little endian BTW, also xor is unitary
         } apply {
             ApplyControlledOnInt(77, X, key, target);//M is 77 in dec
         }
