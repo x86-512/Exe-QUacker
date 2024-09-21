@@ -66,7 +66,7 @@
             ApplyToEach(X, qubits); //Reverts back to the original state so the function is reversable
             ApplyToEach(H, qubits); //Amplifies the correct probability until it is 1
         } //Reflects across the mean of all probabilities
-
+        //Changes the phases of the wavefunctions in such a way that they align and amplify the correct one
         
         ResetAll(register);
         return MResetEachZ(qubits);
