@@ -34,6 +34,7 @@
             //Siince target is initiallized as the |-> sttate, when we apply a CX on target, the |-> phase on target is kicked back to the key qubit, so the correct state is all 1's
             //We then reverse all of the operations except the CZ involving target to get the original state back (these operations are unitary matricies, so applying again resores the original state)
             //After reveting to the correct state, the only real change that happened was that the correct state is now in the |-> Phase
+            //All of these X's change the states, but not the probabilities, so think of the qubit states as an array, the correct index went from 77 to All 1's, then it becomes -, then reverts back to 77
             ApplyControlledOnInt(77, X, key, target);//M is 77 in dec
             //That function has its own within {} apply {} block, so the only change is the phase, hence why this is a phase oracle
         }
