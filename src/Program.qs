@@ -21,11 +21,20 @@
         //Target 1, M(for reference): 01001101
         
         //This operation is unitary, so it can preserve the total probability of measurement for the quantum state
+        //We use within for all of the reversable operations, and apply for all of the permanant operations
         within {
             //Key is in superposition, 
             ApplyXorInPlace(ciphertext, key); //This is little endian BTW, also xor is unitary
+            //Xor is the same as a cx gate
         } apply {
+            //Let me explain this function:
+            //Since the key is in superposition, you can apply a biconditional with the bits in the int and the qubits in superposition (which is NOT XOR | X(CX()))
+            //The correct state will then become all 1's (although in superposition still), then that correct state will be used as a control for a CX gate where target is the target qubit
+            //Siince target is initiallized as the |-> sttate, when we apply a CX on target, the |-> phase on target is kicked back to the key qubit, so the correct state is all 1's
+            //We then reverse all of the operations except the CZ involving target to get the original state back (these operations are unitary matricies, so applying again resores the original state)
+            //After reveting to the correct state, the only real change that happened was that the correct state is now in the |-> Phase
             ApplyControlledOnInt(77, X, key, target);//M is 77 in dec
+            //That function has its own within {} apply {} block, so the only change is the phase, hence why this is a phase oracle
         }
         //Target 2, Z(for reference): 1011010
     }
