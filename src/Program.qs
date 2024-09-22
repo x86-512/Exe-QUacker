@@ -72,6 +72,8 @@
 
             ApplyToEach(H, qubits); //If the ones count for the state is even, the +- state is not flipped
             ApplyToEach(X, qubits); //Flips the - phase on everything in the state except 0
+            //When you apply x to something in superposition, if you have a sqrt3/2 |0> and a 1/4|1>, then it becomes sqrt3/2 |1> and a 1/4|0>, and on the bloch sphere, that flips something around the X-axis
+            //So X just swaps the 2 states, but not the phases or probabilities, that's in general, regardless of superposition
             Controlled Z(Most(qubits), Tail(qubits));//Conditional Phase Shift here
             ApplyToEach(X, qubits); //Reverts back to the original state so the function is reversable
             ApplyToEach(H, qubits); //Amplifies the correct probability until it is 1
