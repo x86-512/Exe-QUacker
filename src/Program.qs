@@ -81,6 +81,8 @@
             ApplyToEach(H, qubits); //Amplifies the correct probability until it is 1
         } //Reflects across the mean of all probabilities
         //Changes the phases of the wavefunctions in such a way that they align and amplify the correct one
+        //The phases are really just horizontal shifts in a wave, like (sin(pi+x)), when the crests and troughs match up, they constructively interfere once you apply a hadamard gate
+        //This makes sense because the energy levels in |0> and |1> are different, they'll have different frequencies, you can align the waves up in a way to cause them to match crests/troughs
         
         ResetAll(register);
         return MResetEachZ(qubits);
