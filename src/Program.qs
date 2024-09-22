@@ -28,7 +28,7 @@
             //Xor is the same as a cx gate
         } apply {
             //Let me explain this function:
-            //Since the key is in superposition, you can apply a biconditional <-> with the bits in the int and the qubits in superposition (which is NOT XOR | X(CX()))
+            //Since the key is in superposition, you can apply a biconditional <-> with the bits in the int and the qubits in superposition (which is NOT XOR | X(CX())) // Might be and AND operation instead
             //The correct state will then become all 1's (although in superposition still), then that correct state will be used as a control for a CX gate where target is the target qubit
             //Siince target is initiallized as the |-> sttate, when we apply a CX on target, the |-> phase on target is kicked back to the key qubit, so the correct state is all 1's
             //We then reverse all of the operations except the CZ involving target to get the original state back (these operations are unitary matricies, so applying again resores the original state)
