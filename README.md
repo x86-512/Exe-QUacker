@@ -9,7 +9,7 @@ $N_i = \frac{\frac{\pi}{4}}{arcsin(\frac{1}{\sqrt(n)})-0.5}$
 Where $N_i$ is the optimal number of iterations for the algorithm and N is the number of qubits that the key will be.
 The reason the formula is divided instead of multiplied is because the algorithm is less accurate when multiplied.
 
-The key is then put into superposition with the Hadamard Transform:
+The key is then put into superposition with the Hadamard Gate:
 
 $H|key\rangle^{\otimes n} = \frac{1}{\sqrt(N)}\sum_{x=0}^{N-1}|x\rangle $
 
